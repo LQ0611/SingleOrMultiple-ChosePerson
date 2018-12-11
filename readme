@@ -1,0 +1,14 @@
+1.将 approval 包 拷贝到自己文件的某个位置，建议在screen包下
+2.在路由中声明ApprovalScreen ，名字换一个，别重名
+3.挨个检查这个包中所有引用的文件路径是否正确，例如：import LoadingView from "../../common/LoadingView";
+    我是将所需要的文件，都放到common文件夹中，
+
+4. this.props.navigation.navigate('ApprovalScreen', {button: button, data: data})
+    button:这个按钮的全部信息， data：这条数据的数据详情信息
+
+5.在ApprovalScreen页面，第72行左右，为提交按钮操作，这里面，需要改传的参与以及调用自己的server接口
+6 在ApprovalScreen页面  第101行左右，为获取常用标语操作，这里的接口应该一样，不过需要在自己的server里写一遍，具体自己决定
+
+7.searchPeople页面，在第63 行，有个搜索人的方法，里面需要自己写接口
+
+我把这些需要用的页面写进了路由，你们写的 时候注意名字，或者，你们可以在页面中直接import
